@@ -46,6 +46,15 @@
     <Filter Include="Fichiers de ressources\Utils\Gaetz Engine">
       <UniqueIdentifier>{213bd315-59dd-4e3e-a594-16aa5038b0b9}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de ressources\Shaders\Tessellation Quad">
+      <UniqueIdentifier>{9bd3a97e-9693-4c6b-afe2-baf2916e35c8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Shaders\CubeTessel">
+      <UniqueIdentifier>{6e03369e-ad6b-4a93-a8e0-f6d7d0c48577}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Shaders\Cube">
+      <UniqueIdentifier>{d6f1dbaa-d58b-4274-bf4d-585d5817ba2a}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -111,6 +120,18 @@
     <ClCompile Include="Engine\Timer.cpp">
       <Filter>Fichiers de ressources\Utils\Gaetz Engine</Filter>
     </ClCompile>
+    <ClCompile Include="CubeScene.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TextureScene.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="TesselationQuad.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="CubeTessellationScene.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Shaders\aminatedFragment.shader">
@@ -175,6 +196,30 @@
     </None>
     <None Include="Shaders\terrainTessEvaluation.shader">
       <Filter>Fichiers de ressources\Shaders\Terrain Tessellation</Filter>
+    </None>
+    <None Include="Shaders\tessQuadControl.shader">
+      <Filter>Fichiers de ressources\Shaders\Tessellation Quad</Filter>
+    </None>
+    <None Include="Shaders\tessQuadVertex.shader">
+      <Filter>Fichiers de ressources\Shaders\Tessellation Quad</Filter>
+    </None>
+    <None Include="Shaders\tessQuadEval.shader">
+      <Filter>Fichiers de ressources\Shaders\Tessellation Quad</Filter>
+    </None>
+    <None Include="Shaders\cube.vert">
+      <Filter>Fichiers de ressources\Shaders\Cube</Filter>
+    </None>
+    <None Include="Shaders\cube.frag">
+      <Filter>Fichiers de ressources\Shaders\Cube</Filter>
+    </None>
+    <None Include="Shaders\cubeTesselVertex.shader">
+      <Filter>Fichiers de ressources\Shaders\CubeTessel</Filter>
+    </None>
+    <None Include="Shaders\cubeTesselEval.shader">
+      <Filter>Fichiers de ressources\Shaders\CubeTessel</Filter>
+    </None>
+    <None Include="Shaders\cubeTesselControl.shader">
+      <Filter>Fichiers de ressources\Shaders\CubeTessel</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -253,5 +298,22 @@
     <ClInclude Include="Engine\Timer.h">
       <Filter>Fichiers de ressources\Utils\Gaetz Engine</Filter>
     </ClInclude>
+    <ClInclude Include="CubeScene.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="TextureScene.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="TesselationQuad.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="CubeTessellationScene.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="Shaders\tessQuadFragment.shader">
+      <Filter>Fichiers de ressources\Shaders\Tessellation Quad</Filter>
+    </Text>
   </ItemGroup>
 </Project>

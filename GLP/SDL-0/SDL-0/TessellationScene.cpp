@@ -55,6 +55,15 @@ void TessellationScene::UpdateScene()
 {
 	m_shaderProgram.Use();
 
+	float timeValue = (float)SDL_GetTicks() / 1000;
+	float sinusoidValue = (sin(timeValue) / 2.0f) + 0.5f;
+
+	int itessLevelLocation = glGetUniformLocation(m_shaderProgram.GetID(), "inTessLevel");
+	int otessLevelLocation = glGetUniformLocation(m_shaderProgram.GetID(), "outTessLevel");
+	glUniform1f(itessLevelLocation, sinusoidValue * 10);
+	glUniform1f(otessLevelLocation, sinusoidValue * 20);
+
+
 	glPointSize(5.0f);
 	glDrawArrays(GL_PATCHES, 0, 3);
 

@@ -5,6 +5,8 @@
 #include "TessellationModesScene.h"
 #include "TerrainTessellationScene.h"
 #include "TextureScene.h"
+#include "TesselationQuad.h"
+#include "CubeTessellationScene.h"
 
 enum SceneID {
 	BASE_SCENE,
@@ -13,7 +15,9 @@ enum SceneID {
 	TESSELLATION_MODES,
 	TERRAIN_TESSELLATION,
 	MIP_MAP,
-	CUBES
+	CUBES,
+	TESSELLATION_QUAD,
+	TESSELLATION_CUBE
 };
 
 Scene* SceneSelector(SceneID id) {
@@ -45,6 +49,14 @@ Scene* SceneSelector(SceneID id) {
 	case CUBES: {
 		return new CubeScene();
 	break;
+	}
+	case TESSELLATION_QUAD: {
+		return new TessellationQuadScene();
+		break;
+	}
+	case TESSELLATION_CUBE: {
+		return new CubeTessellationScene();
+		break;
 	}
 	default: {
 		return nullptr;
