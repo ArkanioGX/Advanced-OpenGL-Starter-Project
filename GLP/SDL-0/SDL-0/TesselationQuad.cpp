@@ -17,12 +17,12 @@ void TessellationQuadScene::UpdateScene()
 	m_shaderProgram.Use();
 
 	float timeValue = (float)SDL_GetTicks() / 1000;
-	float sinusoidValue = (sin(timeValue) / 2.0f) + 0.7f;
+	float sinusoidValue = (sin(timeValue) / 2.0f);
 
 	int itessLevelLocation = glGetUniformLocation(m_shaderProgram.GetID(), "inTessLevel");
 	int otessLevelLocation = glGetUniformLocation(m_shaderProgram.GetID(), "outTessLevel");
-	glUniform1f(itessLevelLocation, fmaxf(sinusoidValue * 10,1));
-	glUniform1f(otessLevelLocation, fmaxf(sinusoidValue * 20,1));
+	glUniform1f(itessLevelLocation, fmaxf(sinusoidValue * 6,1));
+	glUniform1f(otessLevelLocation, fmaxf(sinusoidValue * 10,1));
 
 
 	glPointSize(5.0f);
