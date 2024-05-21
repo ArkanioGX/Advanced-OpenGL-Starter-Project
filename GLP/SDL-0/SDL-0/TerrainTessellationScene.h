@@ -6,7 +6,7 @@ class TerrainTessellationScene :public TessellationScene
 {
 public:
     TerrainTessellationScene();
-    ~TerrainTessellationScene(){}
+    ~TerrainTessellationScene() {}
     void SetupScene() override;
     void UpdateScene() override;
     void HandleInputs(SDL_Event& e) override;

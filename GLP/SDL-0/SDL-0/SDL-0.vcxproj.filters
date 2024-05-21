@@ -55,6 +55,15 @@
     <Filter Include="Fichiers de ressources\Shaders\Cube">
       <UniqueIdentifier>{d6f1dbaa-d58b-4274-bf4d-585d5817ba2a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Fichiers de ressources\Shaders\Beach">
+      <UniqueIdentifier>{6e25a245-0301-4d75-965e-28b6d8072aa7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Shaders\Beach\Sand">
+      <UniqueIdentifier>{b4de4e67-985d-4b8b-b54c-f23897d88192}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Fichiers de ressources\Shaders\Beach\Sea">
+      <UniqueIdentifier>{5aba22d8-af32-48a6-b374-f789c1bf9102}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -131,6 +140,9 @@
     </ClCompile>
     <ClCompile Include="CubeTessellationScene.cpp">
       <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="BeachScene.cpp">
+      <Filter>Fichiers sources\Scenes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -221,6 +233,30 @@
     <None Include="Shaders\cubeTesselControl.shader">
       <Filter>Fichiers de ressources\Shaders\CubeTessel</Filter>
     </None>
+    <None Include="Shaders\beachSandFragment.shader">
+      <Filter>Fichiers de ressources\Shaders\Beach\Sand</Filter>
+    </None>
+    <None Include="Shaders\beachSandTessControl.shader">
+      <Filter>Fichiers de ressources\Shaders\Beach\Sand</Filter>
+    </None>
+    <None Include="Shaders\beachSandTessEvaluation.shader">
+      <Filter>Fichiers de ressources\Shaders\Beach\Sand</Filter>
+    </None>
+    <None Include="Shaders\beachSandVertex.shader">
+      <Filter>Fichiers de ressources\Shaders\Beach\Sand</Filter>
+    </None>
+    <None Include="Shaders\beachSeaFragment.shader">
+      <Filter>Fichiers de ressources\Shaders\Beach\Sea</Filter>
+    </None>
+    <None Include="Shaders\beachSeaTessControl.shader">
+      <Filter>Fichiers de ressources\Shaders\Beach\Sea</Filter>
+    </None>
+    <None Include="Shaders\beachSeaTessEvaluation.shader">
+      <Filter>Fichiers de ressources\Shaders\Beach\Sea</Filter>
+    </None>
+    <None Include="Shaders\beachSeaVertex.shader">
+      <Filter>Fichiers de ressources\Shaders\Beach\Sea</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Window.h">
@@ -309,6 +345,9 @@
     </ClInclude>
     <ClInclude Include="CubeTessellationScene.h">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="BeachScene.h">
+      <Filter>Fichiers d%27en-tête\Scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

@@ -1,9 +1,9 @@
 #include "TerrainTessellationScene.h"
 
 
-TerrainTessellationScene::TerrainTessellationScene():
+TerrainTessellationScene::TerrainTessellationScene() :
 	dmapDepth(8.0f), isFogEnabled(true), isDisplacementEnabled(true),
-	wireframe(false), paused(false), totalTime(0){}
+	wireframe(false), paused(false), totalTime(0) {}
 
 
 void TerrainTessellationScene::LoadShaders() {
@@ -52,7 +52,7 @@ void TerrainTessellationScene::UpdateScene() {
 	glClearBufferfv(GL_COLOR, 0, bgColor);
 	glClearBufferfv(GL_DEPTH, 0, &one);
 
-	view = Matrix4::createLookAt(Vector3(sinf(t) * r, h, cosf(t) * r), Vector3(0.0f,0.0f,0.0f), Vector3(0.0f, 1.0f, 0.0f));
+	view = Matrix4::createLookAt(Vector3(sinf(t) * r, h, cosf(t) * r), Vector3(0.0f, 0.0f, 0.0f), Vector3(0.0f, 1.0f, 0.0f));
 	proj = Matrix4::createPerspectiveFOV(45.0f, Window::Dimension.x, Window::Dimension.y, 0.1f, 1000.0f);
 
 	m_shaderProgram.Use();
@@ -77,12 +77,12 @@ void TerrainTessellationScene::HandleInputs(SDL_Event& e)
 	switch (e.type)
 	{
 	case SDL_KEYDOWN:
-		if(e.key.keysym.sym == SDLK_w)
+		if (e.key.keysym.sym == SDLK_w)
 		{
 			//press W to switch with wireframe view
 			wireframe = !wireframe;
 		}
-        
+
 	}
 }
 
