@@ -2,7 +2,8 @@
 
 layout(quads, fractional_odd_spacing) in;
 
-layout(binding = 1) uniform sampler2D tex_displacement;
+layout(binding = 1)
+uniform sampler2D tex_displacement;
 
 uniform mat4 mv_matrix;
 uniform mat4 proj_matrix;
@@ -11,13 +12,15 @@ uniform float dmap_depth;
 
 in TCS_OUT
 {
-    vec2 tc;
+vec2 tc;
 } tes_in[];
 
 out TES_OUT
 {
-    vec2 tc;
-} tes_out;
+vec2 tc;
+    
+}
+tes_out;
 
 void main(void)
 {
