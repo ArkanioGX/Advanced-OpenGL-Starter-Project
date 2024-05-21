@@ -7,6 +7,7 @@
 #include "TextureScene.h"
 #include "TesselationQuad.h"
 #include "CubeTessellationScene.h"
+#include "BeachScene.h"
 
 enum SceneID {
 	BASE_SCENE,
@@ -17,7 +18,8 @@ enum SceneID {
 	MIP_MAP,
 	CUBES,
 	TESSELLATION_QUAD,
-	TESSELLATION_CUBE
+	TESSELLATION_CUBE,
+	BEACH
 };
 
 Scene* SceneSelector(SceneID id) {
@@ -56,6 +58,10 @@ Scene* SceneSelector(SceneID id) {
 	}
 	case TESSELLATION_CUBE: {
 		return new CubeTessellationScene();
+		break;
+	}
+	case BEACH: {
+		return new BeachScene();
 		break;
 	}
 	default: {
